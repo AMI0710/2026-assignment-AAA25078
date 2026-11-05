@@ -10,7 +10,14 @@ public static class Matrix
     ///<returns>(n,n)の単位行列</returns>
     public static double[,] Eye(int n)
     {
-        return new double[0, 0];
+        double[,] I = new double[n, n];
+
+    for (int i = 0; i < n; i++)
+    {
+        I[i, i] = 1;
+    }
+
+    return I;
     }
 
     ///<summary>要素がすべて1の行列</summary>
@@ -19,7 +26,15 @@ public static class Matrix
     ///<returns>要素がすべて1の(m,n)の行列</returns>
     public static double[,] Ones(int m, int n)
     {
-        return new double[0, 0];
+        double[,] ones = new double[m, n];
+        for (int i = 0; i < m; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                ones[i, j] = 1;
+            }
+        }
+        return ones;
     }
 
     ///<summary>要素がすべて1のベクトル</summary>
@@ -27,7 +42,7 @@ public static class Matrix
     ///<returns>要素がすべて1の長さnのベクトル</returns>
     public static double[] Ones(int n)
     {
-        return new double[0];
+        return new double[n].Select(_ => 1.0).ToArray();
     }
 
     /// <summary>一様分布で初期化された行列を生成</summary>
@@ -37,7 +52,15 @@ public static class Matrix
     /// <returns>生成された行列</returns>
     public static double[,] Uniform(int m, int n, Random rand)
     {
-        return new double[0, 0];
+        double[,] matrix = new double[m, n];
+        for (int i = 0; i < m; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                matrix[i, j] = rand.NextDouble();
+            }
+        }
+        return matrix;  
     }
 
     /// <summary>一様分布で初期化されたベクトルを生成</summary>
@@ -46,7 +69,7 @@ public static class Matrix
     /// <returns>生成されたベクトル</returns>
     public static double[] Uniform(int n, Random rand)
     {
-        return new double[0];
+        return Enumerable.Repeat(0.0, n).Select(_ => rand.NextDouble()).ToArray(); 
     }
 
     /// <summary>正規分布で初期化された行列を生成</summary>
@@ -56,7 +79,26 @@ public static class Matrix
     /// <returns>生成された行列</returns>
     public static double[,] Normal(int m, int n, Random rand)
     {
-        return new double[0, 0];
+        double[,] X = new double[m, n];
+
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            double u1;
+            do
+            {
+                u1 = rand.NextDouble();
+            } while (u1 == 0);
+
+            double u2 = rand.NextDouble();
+
+            X[i, j] = Math.Sqrt(-2.0 * Math.Log(u1))
+                      * Math.Cos(2.0 * Math.PI * u2);
+        }
+    }
+
+    return X;
     }
 
     /// <summary>正規分布で初期化されたベクトルを生成</summary>
@@ -65,7 +107,23 @@ public static class Matrix
     /// <returns>生成されたベクトル</returns>
     public static double[] Normal(int n, Random rand)
     {
-        return new double[0];
+        double[] x = new double[n];
+
+    for (int i = 0; i < n; i++)
+    {
+        double u1;
+        do
+        {
+            u1 = rand.NextDouble();
+        } while (u1 == 0);
+
+        double u2 = rand.NextDouble();
+
+        x[i] = Math.Sqrt(-2.0 * Math.Log(u1))
+               * Math.Cos(2.0 * Math.PI * u2);
+    }
+
+    return x;
     }
 
     ///<summary>行列をコピーする</summary>
@@ -73,7 +131,17 @@ public static class Matrix
     ///<returns>コピー先</returns>
     public static double[,] Copy(double[,] X)
     {
-        return new double[0, 0];
+        int m = X.GetLength(0);
+        int n = X.GetLength(1);
+        double[,] Y = new double[m, n];
+        for (int i = 0; i < m; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                Y[i, j] = X[i, j];
+            }
+        }
+        return Y;
     }
 
     ///<summary>ベクトルをコピーする</summary>
@@ -81,7 +149,7 @@ public static class Matrix
     ///<returns>コピー先</returns>
     public static double[] Copy(double[] x)
     {
-        return new double[0];
+        return new double[x.Length].Select((_, i) => x[i]).ToArray();
     }
 
     ///<summary>行列をコピーする</summary>
@@ -89,7 +157,16 @@ public static class Matrix
     ///<param name="Y"=>コピー先</param>
     public static void Copy(double[,] X, double[,] Y)
     {
+ int m = X.GetLength(0);
+    int n = X.GetLength(1);
 
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            Y[i, j] = X[i, j];
+        }
+    }
     }
 
     ///<summary>ベクトルをコピーする</summary>
@@ -97,7 +174,10 @@ public static class Matrix
     ///<param name="y"=>コピー先</param>
     public static void Copy(double[] x, double[] y)
     {
-
+        for (int i = 0; i < x.Length; i++)
+        {
+            y[i] = x[i];
+        }
     }
 
     ///<summary>転置</summary>
@@ -105,7 +185,17 @@ public static class Matrix
     ///<returns>転置された行列</returns>
     public static double[,] Transpose(double[,] X)
     {
-        return new double[0, 0];
+        int m = X.GetLength(0);
+        int n = X.GetLength(1);
+        double[,] Y = new double[n, m];
+        for (int i = 0; i < m; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                Y[j, i] = X[i, j];
+            }
+        }
+        return Y;
     }
 
     ///<summary>行列のスカラー倍: alpha*X</summary>
@@ -114,7 +204,17 @@ public static class Matrix
     ///<returns>スカラー倍された行列</returns>
     public static double[,] Scalar(double[,] X, double alpha)
     {
-        return new double[0, 0];
+        int m = X.GetLength(0);
+        int n = X.GetLength(1);
+        double[,] Y = new double[m, n];
+        for (int i = 0; i < m; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                Y[i, j] = alpha * X[i, j];
+            }
+        }
+        return Y;
     }
 
     ///<summary>ベクトルのスカラー倍: alpha*x</summary>
@@ -123,7 +223,7 @@ public static class Matrix
     ///<returns>スカラー倍されたベクトル</returns>
     public static double[] Scalar(double[] x, double alpha)
     {
-        return new double[0];
+        return x.Select(xi => alpha * xi).ToArray();
     }
 
     ///<summary>行列の加算: X + Y</summary>
@@ -132,7 +232,17 @@ public static class Matrix
     ///<returns>結果の行列</returns>
     public static double[,] Add(double[,] X, double[,] Y)
     {
-        return new double[0, 0];
+        int m = X.GetLength(0);
+        int n = X.GetLength(1);
+        double[,] Z = new double[m, n];
+        for (int i = 0; i < m; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                Z[i, j] = X[i, j] + Y[i, j];
+            }
+        }
+        return Z;
     }
 
     ///<summary>ベクトルの加算: x + y</summary>
@@ -141,7 +251,7 @@ public static class Matrix
     ///<returns>結果のベクトル</returns>
     public static double[] Add(double[] x, double[] y)
     {
-        return new double[0];
+        return x.Select((xi, i) => xi + y[i]).ToArray();
     }
 
     /// <summary>行列Xの各成分にaを足す</summary>
@@ -150,7 +260,17 @@ public static class Matrix
     /// <returns>結果の行列</returns>
     public static double[,] Add(double[,] X, double a)
     {
-        return new double[0, 0];
+        int m = X.GetLength(0);
+        int n = X.GetLength(1);
+        double[,] Z = new double[m, n];
+        for (int i = 0; i < m; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                Z[i, j] = X[i, j] + a;
+            }
+        }
+        return Z;
     }
 
     /// <summary>ベクトルxの各成分にaを足す</summary>
@@ -159,7 +279,7 @@ public static class Matrix
     /// <returns>結果のベクトル</returns>
     public static double[] Add(double[] x, double a)
     {
-        return new double[0];
+        return x.Select(xi => xi + a).ToArray();
     }
 
     ///<summary>行列の成分ごとの乗算: Z[i,j] = X[i,j] * Y[i,j]</summary>
@@ -168,7 +288,17 @@ public static class Matrix
     ///<returns>結果の行列</returns>
     public static double[,] CwiseMultiply(double[,] X, double[,] Y)
     {
-        return new double[0, 0];
+        int m = X.GetLength(0);
+        int n = X.GetLength(1);
+        double[,] Z = new double[m, n];
+        for (int i = 0; i < m; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                Z[i, j] = X[i, j] * Y[i, j];
+            }
+        }
+        return Z;
     }
 
     /// <summary>ベクトルの成分ごとの乗算: z[i] = x[i] * y[i]</summary>
@@ -177,7 +307,7 @@ public static class Matrix
     /// <returns>結果のベクトル</returns>
     public static double[] CwiseMultiply(double[] x, double[] y)
     {
-        return new double[0];
+        return x.Select((xi, i) => xi * y[i]).ToArray();
     }
 
     /// <summary>行列の成分ごとの除算: Z[i,j] = X[i,j] / Y[i,j]</summary>
@@ -186,7 +316,17 @@ public static class Matrix
     /// <returns>結果の行列</returns>
     public static double[,] CwiseDivide(double[,] X, double[,] Y)
     {
-        return new double[0, 0];
+        int m = X.GetLength(0);
+        int n = X.GetLength(1);
+        double[,] Z = new double[m, n];
+        for (int i = 0; i < m; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                Z[i, j] = X[i, j] / Y[i, j];
+            }
+        }
+        return Z;
     }
 
     /// <summary>ベクトルの成分ごとの除算: z[i] = x[i] / y[i]</summary>
@@ -195,7 +335,7 @@ public static class Matrix
     /// <returns>結果のベクトル</returns>
     public static double[] CwiseDivide(double[] x, double[] y)
     {
-        return new double[0];
+        return x.Select((xi, i) => xi / y[i]).ToArray();
     }
 
     ///<summary>行列の乗算: X * Y</summary>
@@ -204,7 +344,21 @@ public static class Matrix
     ///<param name="Z">結果の行列</param>
     public static double[,] Multiply(double[,] X, double[,] Y)
     {
-        return new double[0, 0];
+        int m = X.GetLength(0);
+        int n = X.GetLength(1);
+        int p = Y.GetLength(1);
+        double[,] Z = new double[m, p];
+        for (int i = 0; i < m; i++)
+        {
+            for (int j = 0; j < p; j++)
+            {
+                for (int k = 0; k < n; k++)
+                {
+                    Z[i, j] += X[i, k] * Y[k, j];
+                }
+            }
+        }
+        return Z;
     }
 
     ///<summary>行列とベクトルの乗算: X * y</summary>
@@ -213,7 +367,16 @@ public static class Matrix
     ///<returns>結果のベクトル</returns>
     public static double[] Multiply(double[,] X, double[] y)
     {
-        return new double[0];
+        int m = X.GetLength(0);
+        double[] z = new double[m];
+        for (int i = 0; i < m; i++)
+        {
+            for (int j = 0; j < y.Length; j++)
+            {
+                z[i] += X[i, j] * y[j];
+            }
+        }
+        return z;
     }
 
     ///<summary>ベクトルと行列の乗算: x * Y</summary>
@@ -222,7 +385,16 @@ public static class Matrix
     ///<returns>結果のベクトル</returns>
     public static double[] Multiply(double[] x, double[,] Y)
     {
-        return new double[0];
+        int n = Y.GetLength(1);
+        double[] z = new double[n];
+        for (int j = 0; j < n; j++)
+        {
+            for (int i = 0; i < x.Length; i++)
+            {
+                z[j] += x[i] * Y[i, j];
+            }
+        }
+        return z;
     }
 
     ///<summary>内積</summary>
@@ -231,7 +403,7 @@ public static class Matrix
     ///<returns>xとyの内積</returns>
     public static double Inner(double[] x, double[] y)
     {
-        return 0.0;
+        return x.Zip(y, (xi, yi) => xi * yi).Sum();
     }
 
     ///<summary>外積</summary>
@@ -240,7 +412,17 @@ public static class Matrix
     ///<returns>xとyの外積で得られる行列</returns>
     public static double[,] Outer(double[] x, double[] y)
     {
-        return new double[0, 0];
+        int m = x.Length;
+        int n = y.Length;
+        double[,] Z = new double[m, n];
+        for (int i = 0; i < m; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                Z[i, j] = x[i] * y[j];
+            }
+        }
+        return Z;
     }
 
     ///<summary>行列から指定された列ベクトル取り出す: X[pos:pos+len,col]</summary>
@@ -251,19 +433,21 @@ public static class Matrix
     ///<returns>取り出されたベクトル</returns>
     public static double[] GetColumn(double[,] X, int col, int pos, int len)
     {
-        return new double[0];
+        double[] z = new double[len];
+        for (int i = 0; i < len; i++)
+        {
+            z[i] = X[pos + i, col];
+        }
+        return z;
     }
 
-    ///<summary>行列の指定された列にベクトルを代入: X[pos:pos+len,col] = y</summary>
-    ///<param name="X">入力行列</param>
-    ///<param name="col">列の添字</param>
-    ///<param name="pos">代入する開始位置</param>
-    ///<param name="y">代入するベクトル</param>
     public static void SetColumn(double[,] X, int col, int pos, double[] y)
     {
-
+        for (int i = 0; i < y.Length; i++)
+        {
+            X[pos + i, col] = y[i];
+        }
     }
-
     ///<summary>行列から指定された行ベクトル取り出す: X[row,pos:pos+len]</summary>
     ///<param name="X">入力行列</param>
     ///<param name="row">行の添字</param>
@@ -272,7 +456,12 @@ public static class Matrix
     ///<returns>取り出されたベクトル</returns>
     public static double[] GetRow(double[,] X, int row, int pos, int len)
     {
-        return new double[0];
+        double[] z = new double[len];
+        for (int i = 0; i < len; i++)
+        {
+            z[i] = X[row, pos + i];
+        }
+        return z;
     }
 
     ///<summary>行列の指定された行にベクトルを代入: X[row,pos:pos+len] = y</summary>
@@ -282,7 +471,10 @@ public static class Matrix
     ///<param name="y">代入するベクトル</param>
     public static void SetRow(double[,] X, int row, int pos, double[] y)
     {
-
+        for (int i = 0; i < y.Length; i++)
+        {
+            X[row, pos + i] = y[i];
+        }
     }
 
     ///<summary>ベクトルから指定された部分ベクトルを取り出す</summary>
@@ -292,16 +484,24 @@ public static class Matrix
     ///<returns>取り出されたベクトル</returns>
     public static double[] GetSubvector(double[] x, int pos, int len)
     {
-        return new double[0];
+        double[] z = new double[len];
+        for (int i = 0; i < len; i++)
+        {
+            z[i] = x[pos + i];
+        }
+        return z;
     }
 
     ///<summary>ベクトルの指定された部分に別のベクトルを代入</summary>
-    ///<param name="x">入力ベクトル<</param>
+    ///<param name="x">入力ベクトル</param>
     ///<param name="pos">代入する開始位置</param>
     ///<param name="y">代入するベクトル</param>
     public static void SetSubvector(double[] x, int pos, double[] y)
     {
-
+        for (int i = 0; i < y.Length; i++)
+        {
+            x[pos + i] = y[i];
+        }
     }
 
     ///<summary>行列の成分ごとに関数を適用: Y[i,j] = f(X[i,j])</summary>
@@ -310,7 +510,17 @@ public static class Matrix
     ///<results>結果として得られる行列</results> 
     public static double[,] CwiseFunction(double[,] X, Func<double, double> f)
     {
-        return new double[0, 0];
+        int m = X.GetLength(0);
+        int n = X.GetLength(1);
+        double[,] Y = new double[m, n];
+        for (int i = 0; i < m; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                Y[i, j] = f(X[i, j]);
+            }
+        }
+        return Y;
     }
 
     ///<summary>ベクトルの成分ごとに関数を適用: y[i] = f(x[i])</summary>
@@ -319,6 +529,12 @@ public static class Matrix
     ///<results>結果として得られるベクトル</results>
     public static double[] CwiseFunction(double[] x, Func<double, double> f)
     {
-        return new double[0];
+        int n = x.Length;
+        double[] y = new double[n];
+        for (int i = 0; i < n; i++)
+        {
+            y[i] = f(x[i]);
+        }
+        return y   ;
     }
 }
