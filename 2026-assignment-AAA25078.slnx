@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="ConsoleRandPerm/ConsoleRandPerm.csproj" />
+  <Project Path="LinearAlgebra.Tests/LinearAlgebra.Tests.csproj" />
+  <Project Path="LinearAlgebra/LinearAlgebra.csproj" />
+  <Project Path="Statistics.Tests/Statistics.Tests.csproj" />
+  <Project Path="Statistics/Statistics.csproj" />
+</Solution>

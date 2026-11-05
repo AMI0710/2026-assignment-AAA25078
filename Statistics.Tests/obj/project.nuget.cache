@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "/JsFg2hE9ts=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\amits\\OneDrive\\デスクトップ\\2026-assignment-AAA25078\\Statistics.Tests\\Statistics.Tests.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\amits\\.nuget\\packages\\microsoft.applicationinsights\\2.23.0\\microsoft.applicationinsights.2.23.0.nupkg.sha512",
+    "C:\\Users\\amits\\.nuget\\packages\\microsoft.codecoverage\\18.11.0\\microsoft.codecoverage.18.11.0.nupkg.sha512",
+    "C:\\Users\\amits\\.nuget\\packages\\microsoft.net.test.sdk\\18.11.0\\microsoft.net.test.sdk.18.11.0.nupkg.sha512",
+    "C:\\Users\\amits\\.nuget\\packages\\microsoft.testing.extensions.telemetry\\2.5.2\\microsoft.testing.extensions.telemetry.2.5.2.nupkg.sha512",
+    "C:\\Users\\amits\\.nuget\\packages\\microsoft.testing.extensions.trxreport.abstractions\\2.5.2\\microsoft.testing.extensions.trxreport.abstractions.2.5.2.nupkg.sha512",
+    "C:\\Users\\amits\\.nuget\\packages\\microsoft.testing.platform\\2.5.2\\microsoft.testing.platform.2.5.2.nupkg.sha512",
+    "C:\\Users\\amits\\.nuget\\packages\\microsoft.testing.platform.msbuild\\2.5.2\\microsoft.testing.platform.msbuild.2.5.2.nupkg.sha512",
+    "C:\\Users\\amits\\.nuget\\packages\\microsoft.testplatform.objectmodel\\18.11.0\\microsoft.testplatform.objectmodel.18.11.0.nupkg.sha512",
+    "C:\\Users\\amits\\.nuget\\packages\\microsoft.testplatform.testhost\\18.11.0\\microsoft.testplatform.testhost.18.11.0.nupkg.sha512",
+    "C:\\Users\\amits\\.nuget\\packages\\mstest.analyzers\\4.5.2\\mstest.analyzers.4.5.2.nupkg.sha512",
+    "C:\\Users\\amits\\.nuget\\packages\\mstest.testadapter\\4.5.2\\mstest.testadapter.4.5.2.nupkg.sha512",
+    "C:\\Users\\amits\\.nuget\\packages\\mstest.testframework\\4.5.2\\mstest.testframework.4.5.2.nupkg.sha512"
+  ],
+  "logs": []
+}

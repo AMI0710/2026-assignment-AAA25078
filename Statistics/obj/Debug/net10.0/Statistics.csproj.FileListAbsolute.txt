@@ -1,0 +1,11 @@
+C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\Statistics\bin\Debug\net10.0\Statistics.deps.json
+C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\Statistics\bin\Debug\net10.0\Statistics.dll
+C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\Statistics\bin\Debug\net10.0\Statistics.pdb
+C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\Statistics\obj\Debug\net10.0\Statistics.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\Statistics\obj\Debug\net10.0\Statistics.AssemblyInfoInputs.cache
+C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\Statistics\obj\Debug\net10.0\Statistics.AssemblyInfo.cs
+C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\Statistics\obj\Debug\net10.0\Statistics.csproj.CoreCompileInputs.cache
+C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\Statistics\obj\Debug\net10.0\Statistics.dll
+C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\Statistics\obj\Debug\net10.0\refint\Statistics.dll
+C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\Statistics\obj\Debug\net10.0\Statistics.pdb
+C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\Statistics\obj\Debug\net10.0\ref\Statistics.dll
