@@ -2,6 +2,8 @@
   <Project Path="ConsoleRandPerm/ConsoleRandPerm.csproj" />
   <Project Path="LinearAlgebra.Tests/LinearAlgebra.Tests.csproj" />
   <Project Path="LinearAlgebra/LinearAlgebra.csproj" />
+  <Project Path="Optimizer.Tests/Optimizer.Tests.csproj" />
+  <Project Path="Optimizer/Optimizer.csproj" />
   <Project Path="Statistics.Tests/Statistics.Tests.csproj" />
   <Project Path="Statistics/Statistics.csproj" />
 </Solution>

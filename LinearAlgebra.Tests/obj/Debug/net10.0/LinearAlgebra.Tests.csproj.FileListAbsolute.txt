@@ -1,5 +1,13 @@
 C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\LinearAlgebra.Tests\bin\Debug\net10.0\.msCoverageExtensionSourceRootsMapping_LinearAlgebra.Tests
 C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\LinearAlgebra.Tests\bin\Debug\net10.0\.msCoverageSourceRootsMapping_LinearAlgebra.Tests
+C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\LinearAlgebra.Tests\obj\Debug\net10.0\LinearAlgebra.Tests.csproj.AssemblyReference.cache
+C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\LinearAlgebra.Tests\obj\Debug\net10.0\LinearAlgebra.Tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\LinearAlgebra.Tests\obj\Debug\net10.0\LinearAlgebra.Tests.gentestingplatformentrypointinputcache.cache
+C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\LinearAlgebra.Tests\obj\Debug\net10.0\LinearAlgebra.Tests.genautoregisteredextensionsinputcache.cache
+C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\LinearAlgebra.Tests\obj\Debug\net10.0\LinearAlgebra.Tests.AssemblyInfoInputs.cache
+C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\LinearAlgebra.Tests\obj\Debug\net10.0\LinearAlgebra.Tests.AssemblyInfo.cs
+C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\LinearAlgebra.Tests\obj\Debug\net10.0\LinearAlgebra.Tests.csproj.CoreCompileInputs.cache
+C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\LinearAlgebra.Tests\obj\Debug\net10.0\LinearAlgebra.Tests.sourcelink.json
 C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\LinearAlgebra.Tests\bin\Debug\net10.0\testhost.dll
 C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\LinearAlgebra.Tests\bin\Debug\net10.0\Microsoft.TestPlatform.AdapterUtilities.dll
 C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\LinearAlgebra.Tests\bin\Debug\net10.0\testhost.exe
@@ -259,13 +267,6 @@ C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\LinearAlgebr
 C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\LinearAlgebra.Tests\bin\Debug\net10.0\LinearAlgebra.pdb
 C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\LinearAlgebra.Tests\bin\Debug\net10.0\Statistics.pdb
 C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\LinearAlgebra.Tests\bin\Debug\net10.0\MSTest.TestFramework.Extensions.xml
-C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\LinearAlgebra.Tests\obj\Debug\net10.0\LinearAlgebra.Tests.csproj.AssemblyReference.cache
-C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\LinearAlgebra.Tests\obj\Debug\net10.0\LinearAlgebra.Tests.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\LinearAlgebra.Tests\obj\Debug\net10.0\LinearAlgebra.Tests.gentestingplatformentrypointinputcache.cache
-C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\LinearAlgebra.Tests\obj\Debug\net10.0\LinearAlgebra.Tests.genautoregisteredextensionsinputcache.cache
-C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\LinearAlgebra.Tests\obj\Debug\net10.0\LinearAlgebra.Tests.AssemblyInfoInputs.cache
-C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\LinearAlgebra.Tests\obj\Debug\net10.0\LinearAlgebra.Tests.AssemblyInfo.cs
-C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\LinearAlgebra.Tests\obj\Debug\net10.0\LinearAlgebra.Tests.csproj.CoreCompileInputs.cache
 C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\LinearAlgebra.Tests\obj\Debug\net10.0\LinearAl.2E9B10B1.Up2Date
 C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\LinearAlgebra.Tests\obj\Debug\net10.0\LinearAlgebra.Tests.dll
 C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\LinearAlgebra.Tests\obj\Debug\net10.0\refint\LinearAlgebra.Tests.dll

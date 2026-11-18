@@ -151,6 +151,7 @@ C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\Statistics.T
 C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\Statistics.Tests\obj\Debug\net10.0\Statistics.Tests.AssemblyInfoInputs.cache
 C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\Statistics.Tests\obj\Debug\net10.0\Statistics.Tests.AssemblyInfo.cs
 C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\Statistics.Tests\obj\Debug\net10.0\Statistics.Tests.csproj.CoreCompileInputs.cache
+C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\Statistics.Tests\obj\Debug\net10.0\Statistics.Tests.sourcelink.json
 C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\Statistics.Tests\obj\Debug\net10.0\Statisti.83FBE2AE.Up2Date
 C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\Statistics.Tests\obj\Debug\net10.0\Statistics.Tests.dll
 C:\Users\amits\OneDrive\デスクトップ\2026-assignment-AAA25078\Statistics.Tests\obj\Debug\net10.0\refint\Statistics.Tests.dll
