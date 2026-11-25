@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ConsoleRandPerm")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+65b9ab02cf1b98a45f1ff8b69c483abe0f197ef2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eff8cd6146ab7e4067f2d8bb1827c861ccfed55f")]
 [assembly: System.Reflection.AssemblyProductAttribute("ConsoleRandPerm")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ConsoleRandPerm")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -57,12 +57,16 @@ public static class LMMethod
         int n = x.Length;
         double lambda = 1.0;
         double[] current = Copy(x);
+        var residuals = new double[param.MaxIterations + 1];
+        int residualCount = 0;
          for (int k = 0; k < param.MaxIterations; k++)
         {
             // 現在の点における残差関数とヤコビ行列
             double[] f = func(current);
             double[,] D = deriv(current);
             double[,] DT = Transpose(D);
+            double[] gradient = Scalar(Multiply(DT, f), 2.0);
+            residuals[residualCount++] = Math.Sqrt(Inner(gradient, gradient));
 
             // (Df(x)^T Df(x) + lambda I)d = -Df(x)^T f(x)
             double[,] left = Add(Multiply(DT, D), Scalar(Eye(n), lambda));
@@ -90,10 +94,10 @@ public static class LMMethod
             double[] currentF = func(current);
             double[,] currentD = deriv(current);
 
-            double[] gradient = Scalar(
+            double[] currentGradient = Scalar(
                 Multiply(Transpose(currentD), currentF), 2.0);
 
-            double gradientNormSquared = Inner(gradient, gradient);
+            double gradientNormSquared = Inner(currentGradient, currentGradient);
 
             if (gradientNormSquared < param.Tolerance * param.Tolerance
                 || lambda > param.TrustLimit)
@@ -101,10 +105,22 @@ public static class LMMethod
                 break;
             }
         }
+        double[] finalF = func(current);
+        double[,] finalD = deriv(current);
+        double[] finalGradient = Scalar(
+        Multiply(Transpose(finalD), finalF), 2.0);
 
-        var result = new LMMethodResults(current);
-        result.Residuals = func(current);
+        residuals[residualCount++] =
+        Math.Sqrt(Inner(finalGradient, finalGradient));
+        Array.Resize(ref residuals, residualCount);
+
+        var result = new LMMethodResults(current)
+        {
+            Residuals = residuals
+        };
+
         return result;
+        
     }
 }
 
